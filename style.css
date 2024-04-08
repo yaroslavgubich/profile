@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap");
+@import url(https://use.fontawesome.com/releases/v6.1.2/css/all.css);
+
+:root {
+  /* Color scheme */
+  --background-color: #0b0b0b;
+  --text-color: #cbe5d6;
+  --h1-color: #d9f6ef; /* Adjusted for h1 */
+  --h2-color: #35929c; /* Adjusted for h2 */
+  --link-color: #76e3cb;
+  --link-hover-color: rgb(62, 195, 168);
+
+  /* Font families */
+  --font-family-serif: "Lora", serif;
+  --font-family-sans: "Roboto", sans-serif;
+
+  /* Font weights */
+  --font-weight-light: lighter;
+  --font-weight-normal: 400; /* Example */
+  --font-weight-bold: 900;
+
+  /* Other */
+  --container-width: 700px;
+  --container-padding: 40px;
+}
+
+/* Colors and fonts */
+body {
+  background: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-family-serif);
+  font-size: 17px;
+  font-weight: var(--font-weight-light);
+}
+#greeting {
+  color: var(--h1-color);
+}
+
+h2 {
+  color: var(--h2-color);
+  font-size: 20px;
+  font-weight: var(--font-weight-normal);
+}
+
+a {
+  font-family: var(--font-family-sans);
+  color: var(--link-color);
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+}
+li{
+  list-style-type: none;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+/* Flexbox Container */
+.content-container {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */
+  justify-content: center; /* Center children vertically (if needed) */
+  text-align: center; /* Center the text of child elements */
+  padding: 40px; /* Optional: add padding */
+  min-height: 100vh; /* Full viewport height */
+}
+
+/* Image Styles */
+#avatar {
+  border-radius: 50%;
+  width: 300px; /* Fixed width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover the frame without stretching */
+}
+
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+  :root {
+    --container-padding: 20px;
+  }
+
+  .content-container {
+    padding: var(--container-padding);
+  }
+
+  #avatar {
+    width: 200px; /* Smaller image on smaller screens */
+  }
+
+  body {
+    font-size: 15px; /* Adjust base font size for smaller screens */
+  }
+}
+.container {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */
+  justify-content: center; /* Center children vertically (if needed) */
+  text-align: center; /* Center the text of child elements */
+}
+#text {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  flex-wrap: wrap;
+  width: 50%;
+}
+#contacts {
+  margin-left: -190%;
+}
